@@ -19,7 +19,7 @@
             position: absolute;
             top: 0;
             width: 100%;
-            color: #ffffff; 
+            color: #ffffff; /* Изменен цвет текста на белый для лучшей видимости на темном фоне */
         }
         .clicker {
             display: flex;
@@ -33,6 +33,8 @@
             height: 200px;
             cursor: pointer;
             transition: transform 0.1s ease-in-out;
+            -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных устройствах */
+            outline: none; /* Убирает подсветку на десктопных устройствах */
         }
         .clicker img.clicked {
             transform: scale(0.9);
