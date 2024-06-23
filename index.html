@@ -29,8 +29,8 @@
             position: relative;
         }
         .clicker img {
-            width: 250px; /*размер монеты*/
-            height: 250px; 
+            width: 400px; /* Увеличен размер в 2 раза */
+            height: 400px; /* Увеличен размер в 2 раза */
             cursor: pointer;
             transition: transform 0.1s ease-in-out;
             -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных устройствах */
@@ -68,7 +68,14 @@
 
     <script>
         let score = 0;
+        const scoreElement = document.getElementById('score');
         const clickImage = document.getElementById('clickImage');
+
+        // Проверяем, есть ли сохраненный счет в localStorage
+        if (localStorage.getItem('gameScore')) {
+            score = parseInt(localStorage.getItem('gameScore'), 10);
+            scoreElement.innerText = score;
+        }
 
         clickImage.addEventListener('click', function(event) {
             incrementScore();
@@ -91,7 +98,9 @@
 
         function incrementScore() {
             score++;
-            document.getElementById('score').innerText = score;
+            scoreElement.innerText = score;
+            // Сохраняем счет в localStorage
+            localStorage.setItem('gameScore', score);
         }
     </script>
 </body>
