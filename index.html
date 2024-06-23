@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая игра-кликер</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://images.wallpaperscraft.ru/image/single/zvezdnoe_skoplenie_ngc_7129_zvezdy_98385_1280x1024.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .score {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            color: #ffffff; /* Изменен цвет текста на белый для лучшей видимости на темном фоне */
+        }
+        .clicker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .clicker img {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.1s ease-in-out;
+        }
+        .clicker img.clicked {
+            transform: scale(0.9);
+        }
+        .floating-score {
+            position: absolute;
+            font-size: 24px;
+            color: #ffffff;
+            pointer-events: none;
+            animation: floatUp 1.5s ease-in-out forwards;
+        }
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="score">
+        Счет: <span id="score">0</span>
+    </div>
+    <div class="clicker">
+        <img src="https://i.postimg.cc/0N0mFT2G/img.png" alt="Нажми меня!" id="clickImage">
+    </div>
+
+    <script>
+        let score = 0;
+        const clickImage = document.getElementById('clickImage');
+
+        clickImage.addEventListener('click', function(event) {
+            incrementScore();
+            clickImage.classList.add('clicked');
+            setTimeout(() => {
+                clickImage.classList.remove('clicked');
+            }, 100);
+
+            const floatingScore = document.createElement('div');
+            floatingScore.className = 'floating-score';
+            floatingScore.innerText = '+1';
+            floatingScore.style.left = `${event.clientX}px`;
+            floatingScore.style.top = `${event.clientY}px`;
+            clickImage.parentNode.appendChild(floatingScore);
+
+            setTimeout(() => {
+                floatingScore.remove();
+            }, 1500);
+        });
+
+        function incrementScore() {
+            score++;
+            document.getElementById('score').innerText = score;
+        }
+    </script>
+</body>
+</html>
