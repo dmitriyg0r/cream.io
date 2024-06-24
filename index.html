@@ -10,7 +10,8 @@
             background-image: url('https://images.wallpaperscraft.ru/image/single/zvezdnoe_skoplenie_ngc_7129_zvezdy_98385_1280x1024.jpg');
             background-size: cover;
             background-position: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
         }
         .score {
             text-align: center;
@@ -63,7 +64,7 @@
             right: 20px; /* Добавлен отступ справа */
             display: flex;
             justify-content: center;
-            background-color: #000; /* Изменено на черный цвет */
+            background-color: rgba(0, 0, 0, 0.7); /* Изменено на полупрозрачный черный цвет */
             border-radius: 20px; /* Изменено на скругление всех углов */
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -71,11 +72,13 @@
             padding: 20px;
             text-align: center;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
             color: #fff; /* Цвет текста в меню */
+            border-radius: 20px;
         }
         .menu-item:hover {
             background-color: #333; /* Изменено на более темный серый при наведении */
+            transform: scale(1.1); /* Добавлен эффект увеличения при наведении */
         }
         .modal {
             display: none;
@@ -89,7 +92,7 @@
             background-color: rgba(0,0,0,0.4);
         }
         .modal-content {
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.8); /* Изменено на полупрозрачный черный цвет */
             margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
@@ -131,9 +134,13 @@
         .upgrades-list li {
             padding: 10px;
             border-bottom: 1px solid #888;
+            transition: background-color 0.3s;
         }
         .upgrades-list li:last-child {
             border-bottom: none;
+        }
+        .upgrades-list li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
@@ -156,9 +163,9 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <ul class="upgrades-list">
-                <li>Клик</li>
-                <li>Энергия</li>
-                <li>клик в час</li>
+                <li>Улучшение 1</li>
+                <li>Улучшение 2</li>
+                <li>Улучшение 3</li>
             </ul>
         </div>
     </div>
