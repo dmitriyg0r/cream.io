@@ -122,6 +122,19 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .upgrades-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .upgrades-list li {
+            padding: 10px;
+            border-bottom: 1px solid #888;
+        }
+        .upgrades-list li:last-child {
+            border-bottom: none;
+        }
     </style>
 </head>
 <body>
@@ -134,12 +147,24 @@
 
     <div class="menu-container">
         <div class="menu-item">рефералы</div>
-        <div class="menu-item">улучшения</div>
+        <div class="menu-item" id="upgradesButton">улучшения</div>
         <div class="menu-item" id="dropButton">Дроп</div>
     </div>
 
-    <!-- Модальное окно -->
-    <div id="myModal" class="modal">
+    <!-- Модальное окно для улучшений -->
+    <div id="upgradesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <ul class="upgrades-list">
+                <li>Клик</li>
+                <li>Энергия</li>
+                <li>клик в час</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно для дропа -->
+    <div id="dropModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <img src="img.png" alt="Изображение">
@@ -151,9 +176,11 @@
         let score = 0;
         const scoreElement = document.getElementById('score');
         const clickImage = document.getElementById('clickImage');
+        const upgradesButton = document.getElementById('upgradesButton');
         const dropButton = document.getElementById('dropButton');
-        const modal = document.getElementById('myModal');
-        const closeBtn = document.getElementsByClassName('close')[0];
+        const upgradesModal = document.getElementById('upgradesModal');
+        const dropModal = document.getElementById('dropModal');
+        const closeBtns = document.getElementsByClassName('close');
 
         // Проверяем, есть ли сохраненный счет в localStorage
         if (localStorage.getItem('gameScore')) {
@@ -187,17 +214,27 @@
             localStorage.setItem('gameScore', score);
         }
 
-        dropButton.addEventListener('click', function() {
-            modal.style.display = 'block';
+        upgradesButton.addEventListener('click', function() {
+            upgradesModal.style.display = 'block';
         });
 
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
+        dropButton.addEventListener('click', function() {
+            dropModal.style.display = 'block';
         });
+
+        for (let i = 0; i < closeBtns.length; i++) {
+            closeBtns[i].addEventListener('click', function() {
+                upgradesModal.style.display = 'none';
+                dropModal.style.display = 'none';
+            });
+        }
 
         window.addEventListener('click', function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            if (event.target == upgradesModal) {
+                upgradesModal.style.display = 'none';
+            }
+            if (event.target == dropModal) {
+                dropModal.style.display = 'none';
             }
         });
     </script>
