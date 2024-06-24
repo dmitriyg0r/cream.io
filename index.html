@@ -29,8 +29,8 @@
             position: relative;
         }
         .clicker img {
-            width: 250px; /* Увеличен размер */
-            height: 250px; /* Увеличен размер */
+            width: 250px; /* Увеличен размер в 2 раза */
+            height: 250px; /* Увеличен размер в 2 раза */
             cursor: pointer;
             transition: transform 0.1s ease-in-out;
             -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных устройствах */
@@ -56,6 +56,27 @@
                 transform: translateY(-50px);
             }
         }
+        .menu-container {
+            position: fixed;
+            bottom: 20px; /* Добавлен отступ снизу */
+            left: 20px; /* Добавлен отступ слева */
+            right: 20px; /* Добавлен отступ справа */
+            display: flex;
+            justify-content: center;
+            background-color: #000; /* Изменено на черный цвет */
+            border-radius: 20px; /* Изменено на скругление всех углов */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: #fff; /* Цвет текста в меню */
+        }
+        .menu-item:hover {
+            background-color: #333; /* Изменено на более темный серый при наведении */
+        }
     </style>
 </head>
 <body>
@@ -64,6 +85,13 @@
     </div>
     <div class="clicker">
         <img src="img.png" alt="Нажми меня!" id="clickImage">
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-item"></div>
+        <div class="menu-item">рефералы</div>
+        <div class="menu-item">улучшения</div>
+        <div class="menu-item">Дроп</div>
     </div>
 
     <script>
