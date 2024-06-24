@@ -89,22 +89,36 @@
             background-color: rgba(0,0,0,0.4);
         }
         .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
+            background-color: #000;
+            margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
             text-align: center;
+            color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .modal-content img {
+            width: 100px; /* Размер изображения */
+            height: 100px; /* Размер изображения */
+            margin-bottom: 10px;
         }
         .close {
             color: #aaa;
-            float: right;
+            position: absolute;
+            right: 10px;
+            top: 10px;
             font-size: 28px;
             font-weight: bold;
         }
         .close:hover,
         .close:focus {
-            color: black;
+            color: white;
             text-decoration: none;
             cursor: pointer;
         }
@@ -128,6 +142,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <img src="img.png" alt="Изображение">
             <p>Скоро</p>
         </div>
     </div>
