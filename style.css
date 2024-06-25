@@ -139,6 +139,10 @@ body {
 }
 
 .menu-item {
+  user-select: none; /* Запрещает выделение текста */
+  -webkit-user-select: none; /* Для Safari и Chrome */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для Internet Explorer/Edge */
   margin-right: 30px;
   padding: 20px;
   text-align: center;
