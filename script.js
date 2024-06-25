@@ -1,6 +1,8 @@
 let score = 0;
 const scoreElement = document.getElementById('score');
 const clickImage = document.getElementById('clickImage');
+const refModal = document.getElementById('refModal');
+const refButton = document.getElementById('refButton');
 const upgradesButton = document.getElementById('upgradesButton');
 const dropButton = document.getElementById('dropButton');
 const upgradesModal = document.getElementById('upgradesModal');
@@ -39,6 +41,10 @@ function incrementScore() {
     localStorage.setItem('gameScore', score);
 }
 
+refButton.addEventListener('click', function() {
+    refModal.style.display = 'block';
+});
+
 upgradesButton.addEventListener('click', function() {
     upgradesModal.style.display = 'block';
 });
@@ -49,12 +55,17 @@ dropButton.addEventListener('click', function() {
 
 for (let i = 0; i < closeBtns.length; i++) {
     closeBtns[i].addEventListener('click', function() {
+        refModal.style.display = 'none';
         upgradesModal.style.display = 'none';
         dropModal.style.display = 'none';
     });
 }
 
 window.addEventListener('click', function(event) {
+
+    if (event.target == refModal) {
+        refModal.style.display = 'none';
+    }
     if (event.target == upgradesModal) {
         upgradesModal.style.display = 'none';
     }
