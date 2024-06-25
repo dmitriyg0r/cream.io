@@ -14,6 +14,17 @@ if (localStorage.getItem('gameScore')) {
     score = parseInt(localStorage.getItem('gameScore'), 10);
     scoreElement.innerText = score;
 }
+document.addEventListener('touchstart', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
 
 clickImage.addEventListener('click', function(event) {
     incrementScore();
