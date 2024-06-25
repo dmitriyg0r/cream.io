@@ -14,6 +14,7 @@ if (localStorage.getItem('gameScore')) {
     score = parseInt(localStorage.getItem('gameScore'), 10);
     scoreElement.innerText = score;
 }
+
 document.addEventListener('touchstart', function(event) {
     if (event.touches.length > 1) {
         event.preventDefault();
@@ -66,21 +67,24 @@ dropButton.addEventListener('click', function() {
 
 for (let i = 0; i < closeBtns.length; i++) {
     closeBtns[i].addEventListener('click', function() {
-        refModal.style.display = 'none';
-        upgradesModal.style.display = 'none';
-        dropModal.style.display = 'none';
+        if (closeBtns[i].closest('.modal') === refModal) {
+            refModal.style.display = 'none';
+        } else if (closeBtns[i].closest('.modal') === upgradesModal) {
+            upgradesModal.style.display = 'none';
+        } else if (closeBtns[i].closest('.modal') === dropModal) {
+            dropModal.style.display = 'none';
+        }
     });
 }
 
 window.addEventListener('click', function(event) {
-
-    if (event.target == refModal) {
+    if (event.target === refModal) {
         refModal.style.display = 'none';
     }
-    if (event.target == upgradesModal) {
+    if (event.target === upgradesModal) {
         upgradesModal.style.display = 'none';
     }
-    if (event.target == dropModal) {
+    if (event.target === dropModal) {
         dropModal.style.display = 'none';
     }
 });
