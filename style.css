@@ -11,19 +11,17 @@ body {
   --e: cubic-bezier(0.76, 0, 0.24, 1);
   background-color: var(--bg);
   background-image:
-      linear-gradient(45deg, var(--c1) 25%, transparent 25%),
-      linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, var(--c2) 75%),
-      linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
   background-size: var(--s) var(--s);
   background-position:
-      calc(var(--p) *  1) calc(var(--p) *  0),
-      calc(var(--p) * -1) calc(var(--p) *  1),
-      calc(var(--p) *  1) calc(var(--p) * -1),
-      calc(var(--p) * -1) calc(var(--p) *  0);
-  animation:
-      color var(--d) var(--e) infinite,
-      position var(--d) var(--e) infinite;
+    calc(var(--p) *  1) calc(var(--p) *  0),
+    calc(var(--p) * -1) calc(var(--p) *  1),
+    calc(var(--p) *  1) calc(var(--p) * -1),
+    calc(var(--p) * -1) calc(var(--p) *  0);
+  animation: color var(--d) var(--e) infinite, position var(--d) var(--e) infinite;
 }
 
 @keyframes color {
@@ -35,39 +33,39 @@ body {
 
 @keyframes position {
   0% {
-      background-position:
-          calc(var(--p) *  1) calc(var(--p) *  0),
-          calc(var(--p) * -1) calc(var(--p) *  1),
-          calc(var(--p) *  1) calc(var(--p) * -1),
-          calc(var(--p) * -1) calc(var(--p) *  0);
+    background-position:
+      calc(var(--p) *  1) calc(var(--p) *  0),
+      calc(var(--p) * -1) calc(var(--p) *  1),
+      calc(var(--p) *  1) calc(var(--p) * -1),
+      calc(var(--p) * -1) calc(var(--p) *  0);
   }
   25% {
-      background-position:
-          calc(var(--p) *  1) calc(var(--p) *  4),
-          calc(var(--p) * -1) calc(var(--p) *  5),
-          calc(var(--p) *  1) calc(var(--p) *  3),
-          calc(var(--p) * -1) calc(var(--p) *  4);
+    background-position:
+      calc(var(--p) *  1) calc(var(--p) *  4),
+      calc(var(--p) * -1) calc(var(--p) *  5),
+      calc(var(--p) *  1) calc(var(--p) *  3),
+      calc(var(--p) * -1) calc(var(--p) *  4);
   }
   50% {
-      background-position:
-          calc(var(--p) *  3) calc(var(--p) * 8),
-          calc(var(--p) * -3) calc(var(--p) * 9),
-          calc(var(--p) *  2) calc(var(--p) * 7),
-          calc(var(--p) * -2) calc(var(--p) * 8);
+    background-position:
+      calc(var(--p) *  3) calc(var(--p) * 8),
+      calc(var(--p) * -3) calc(var(--p) * 9),
+      calc(var(--p) *  2) calc(var(--p) * 7),
+      calc(var(--p) * -2) calc(var(--p) * 8);
   }
   75% {
-      background-position:
-          calc(var(--p) *  3) calc(var(--p) * 12),
-          calc(var(--p) * -3) calc(var(--p) * 13),
-          calc(var(--p) *  2) calc(var(--p) * 11),
-          calc(var(--p) * -2) calc(var(--p) * 12);
+    background-position:
+      calc(var(--p) *  3) calc(var(--p) * 12),
+      calc(var(--p) * -3) calc(var(--p) * 13),
+      calc(var(--p) *  2) calc(var(--p) * 11),
+      calc(var(--p) * -2) calc(var(--p) * 12);
   }
   100% {
-      background-position:
-          calc(var(--p) *  5) calc(var(--p) * 16),
-          calc(var(--p) * -5) calc(var(--p) * 17),
-          calc(var(--p) *  5) calc(var(--p) * 15),
-          calc(var(--p) * -5) calc(var(--p) * 16);
+    background-position:
+      calc(var(--p) *  5) calc(var(--p) * 16),
+      calc(var(--p) * -5) calc(var(--p) * 17),
+      calc(var(--p) *  5) calc(var(--p) * 15),
+      calc(var(--p) * -5) calc(var(--p) * 16);
   }
 }
 
@@ -117,12 +115,12 @@ body {
 
 @keyframes floatUp {
   0% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
   100% {
-      opacity: 0;
-      transform: translateY(-50px);
+    opacity: 0;
+    transform: translateY(-50px);
   }
 }
 
@@ -139,10 +137,10 @@ body {
 }
 
 .menu-item {
-  user-select: none; /* Запрещает выделение текста */
-  -webkit-user-select: none; /* Для Safari и Chrome */
-  -moz-user-select: none; /* Для Firefox */
-  -ms-user-select: none; /* Для Internet Explorer/Edge */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,60 +253,60 @@ body {
 
 @media (max-width: 600px) {
   .menu-container {
-      align-items: center;
+    align-items: center;
   }
 
   .menu-item {
-      margin: 5px 0;
-      padding: 15px;
-      font-size: 14px;
+    margin: 5px 0;
+    padding: 15px;
+    font-size: 14px;
   }
 
   .menu-item i {
-      font-size: 20px;
-      margin-bottom: 3px;
+    font-size: 20px;
+    margin-bottom: 3px;
   }
 
   .menu-item:not(:last-child)::after {
-      content: '';
-      align-items: center;
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 50%;
-      width: 1px;
-      background: rgba(0, 0, 0, 0.5);
+    content: '';
+    align-items: center;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .modal-content {
-      margin: 20% auto;
-      width: 90%;
-      padding: 15px;
+    margin: 20% auto;
+    width: 90%;
+    padding: 15px;
   }
 
   .modal-content img {
-      width: 80px;
-      height: 80px;
+    width: 80px;
+    height: 80px;
   }
 
   .score {
-      font-size: 30px;
-      top: 20px;
+    font-size: 30px;
+    top: 20px;
   }
 
   .clicker {
-      height: auto;
-      min-height: 100vh;
+    height: auto;
+    min-height: 100vh;
   }
 
   .clicker img {
-      width: 200px;
-      height: 200px;
+    width: 200px;
+    height: 200px;
   }
 
   body {
-      --s: 50vmin;
-      --d: 20000ms;
+    --s: 50vmin;
+    --d: 20000ms;
   }
 }
 
