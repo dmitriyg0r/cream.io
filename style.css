@@ -1,5 +1,4 @@
 body {
-  
   margin: 0;
   font-family: 'Arial', sans-serif;
   --s: 25vmin;
@@ -10,9 +9,6 @@ body {
   --bg: var(--c3);
   --d: 10000ms;
   --e: cubic-bezier(0.76, 0, 0.24, 1);
-  *:focus {
-    outline: none;
-}
   background-color: var(--bg);
   background-image:
       linear-gradient(45deg, var(--c1) 25%, transparent 25%),
@@ -255,4 +251,51 @@ body {
 
 .upgrades-list li:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+  .menu-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .menu-item {
+      margin: 5px 0;
+      padding: 15px;
+  }
+
+  .menu-item:not(:last-child)::after {
+      content: none;
+  }
+
+  .modal-content {
+      margin: 20% auto;
+      width: 90%;
+      padding: 15px;
+  }
+
+  .modal-content img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .score {
+      font-size: 30px;
+      top: 20px;
+  }
+
+  .clicker {
+      height: auto;
+      min-height: 100vh;
+  }
+
+  .clicker img {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+.menu-item:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
