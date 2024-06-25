@@ -1,4 +1,5 @@
 body {
+  
   margin: 0;
   font-family: 'Arial', sans-serif;
   --s: 25vmin;
@@ -9,7 +10,9 @@ body {
   --bg: var(--c3);
   --d: 10000ms;
   --e: cubic-bezier(0.76, 0, 0.24, 1);
-
+  *:focus {
+    outline: none;
+}
   background-color: var(--bg);
   background-image:
       linear-gradient(45deg, var(--c1) 25%, transparent 25%),
