@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Простая игра-кликер</title>
+    <title>creamclick</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <div class="score">
@@ -14,50 +13,40 @@
     <div class="clicker">
         <img src="img.png" alt="Нажми меня!" id="clickImage">
     </div>
-
+    <!-- нижнее Меню -->
     <div class="menu-container">
-        <div class="menu-item">рефералы</div>
+        <div class="menu-item" id="refButton">рефералы</div>
         <div class="menu-item" id="upgradesButton">улучшения</div>
         <div class="menu-item" id="dropButton">Дроп</div>
     </div>
+    <!-- Анимация Фона -->
     <div class="glowing">
-
       <span style="--i:1;"></span>
-
       <span style="--i:2;"></span>
-
       <span style="--i:3;"></span>
-
     </div>
-
     <div class="glowing">
-
       <span style="--i:1;"></span>
-
       <span style="--i:2;"></span>
-
       <span style="--i:3;"></span>
-
     </div>
-
     <div class="glowing">
-
       <span style="--i:1;"></span>
-
       <span style="--i:2;"></span>
-
       <span style="--i:3;"></span>
-
     </div>
-
     <div class="glowing">
-
       <span style="--i:1;"></span>
-
       <span style="--i:2;"></span>
-
       <span style="--i:3;"></span>
-
+    </div>
+    
+    <!-- Модальное окно для Рефералов -->
+    <div id="refModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Скоро</p>
+        </div>
     </div>
 
     <!-- Модальное окно для улучшений -->
@@ -80,6 +69,7 @@
             <p>Скоро</p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
