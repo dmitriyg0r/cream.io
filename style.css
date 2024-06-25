@@ -251,7 +251,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .menu-container {
     display: flex;
     justify-content: space-around;
@@ -261,7 +261,6 @@ body {
     left: 0;
     right: 0;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .menu-item {
