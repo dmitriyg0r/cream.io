@@ -75,10 +75,10 @@ body {
 
 .score {
   text-align: center;
-  font-size: 5vw; /* Использование относительного размера шрифта */
+  font-size: 12vw; /* Использование относительного размера шрифта */
   margin: 2vw 0; /* Относительные отступы */
   position: absolute;
-  top: 4vw; /* Относительное позиционирование */
+  top: 40px; /* позиционирование */
   width: 100%;
   -webkit-text-stroke: 1px black;
   color: white;
@@ -93,8 +93,8 @@ body {
 }
 
 .clicker img {
-  width: 30vw; /* Относительный размер */
-  height: 30vw; /* Относительный размер */
+  width: 50vw; /* Относительный размер */
+  height: 50vw; /* Относительный размер */
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   -webkit-tap-highlight-color: transparent;
