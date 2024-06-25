@@ -262,6 +262,12 @@ body {
   .menu-item {
       margin: 5px 0;
       padding: 15px;
+      font-size: 14px;
+  }
+
+  .menu-item i {
+      font-size: 20px;
+      margin-bottom: 3px;
   }
 
   .menu-item:not(:last-child)::after {
@@ -292,6 +298,11 @@ body {
   .clicker img {
       width: 200px;
       height: 200px;
+  }
+
+  body {
+      --s: 50vmin;
+      --d: 20000ms;
   }
 }
 
