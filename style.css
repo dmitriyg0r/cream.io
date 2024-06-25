@@ -253,7 +253,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .menu-container {
       align-items: center;
   }
@@ -271,6 +271,7 @@ body {
 
   .menu-item:not(:last-child)::after {
       content: '';
+      align-items: center;
       right: -10px;
       top: 50%;
       transform: translateY(-50%);
