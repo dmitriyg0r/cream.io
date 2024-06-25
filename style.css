@@ -90,7 +90,7 @@ body {
     font-size: 24px;
     margin: 20px 0;
     position: absolute;
-    top: 0;
+    top: 40px;
     width: 100%;
     color: #000000;
 }
@@ -129,16 +129,17 @@ body {
         transform: translateY(-50px);
     }
 }
+/* нижнее меню */
 .menu-container {
     position: fixed;
-    bottom: 20px; /* Добавлен отступ снизу */
-    left: 20px; /* Добавлен отступ слева */
-    right: 20px; /* Добавлен отступ справа */
+    bottom: 20px; /* отступ снизу */
+    left: 20px; /* отступ слева */
+    right: 20px; /* отступ справа */
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Изменено на полупрозрачный черный цвет */
-    border-radius: 20px; /* Изменено на скругление всех углов */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 17, 255, 0.7); /* полупрозрачный черный цвет */
+    border-radius: 30px; /* скругление всех углов */
+    box-shadow: 0 -2px 10px rgba(0, 17, 255, 0.7);
 }
 .menu-item {
     padding: 20px;
@@ -149,8 +150,8 @@ body {
     border-radius: 20px;
 }
 .menu-item:hover {
-    background-color: #333; /* Изменено на более темный серый при наведении */
-    transform: scale(1.1); /* Добавлен эффект увеличения при наведении */
+    background-color: #333; /* цвет при наведении */
+    transform: scale(1.1); /* эффект увеличения при наведении */
 }
 .modal {
     display: none;
