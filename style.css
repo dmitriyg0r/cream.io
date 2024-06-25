@@ -255,7 +255,7 @@ body {
 
 @media (max-width: 1024px) {
   .menu-container {
-      align-items: stretch;
+      align-items: center;
   }
 
   .menu-item {
