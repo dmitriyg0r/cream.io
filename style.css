@@ -107,7 +107,7 @@ body {
 
 .floating-score {
   position: absolute;
-  font-size: 2.5vw; /* Относительный размер шрифта */
+  font-size: 10vw; /* Относительный размер шрифта */
   color: #ffffff;
   pointer-events: none;
   animation: floatUp 1.5s ease-in-out forwards;
