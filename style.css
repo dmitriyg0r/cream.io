@@ -72,7 +72,11 @@ body {
 @media (prefers-reduced-motion) {
   body { animation: none; }
 }
-
+.pasive {
+  text-align: center;
+  font-size: 5vw;
+  margin: 10vw 0; /* Относительные отступы */
+}
 .score {
   text-align: center;
   font-size: 12vw; /* размера шрифта */
@@ -93,6 +97,8 @@ body {
 }
 
 .clicker img {
+  top: 100px;
+  position: absolute;
   width: 50vw; /* Относительный размер */
   height: 50vw; /* Относительный размер */
   cursor: pointer;
@@ -193,6 +199,7 @@ body {
 }
 
 .modal-content {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
   margin: 10% auto;
   padding: 2vw; /* Относительные отступы */
