@@ -173,7 +173,11 @@ function saveUpgrades() {
         pasiveClickPurchased: pasiveClickUpgrade.style.display === 'none',
         uslugiClickPurchased: uslugiClickUpgrade.style.display === 'none',
         investClickPurchased: investClickUpgrade.style.display === 'none',
-        multiClickPurchased: multiClickUpgrade.style.display === 'none'
+        multiClickPurchased: multiClickUpgrade.style.display === 'none',
+        superClickPurchased: superClickUpgrade.style.display === 'none',
+        energyBlastPurchased: energyBlastUpgrade.style.display === 'none',
+
+
     };
     localStorage.setItem('gameUpgrades', JSON.stringify(upgrades));
 }
