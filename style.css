@@ -75,7 +75,7 @@ body {
 .pasive {
   text-align: center;
   font-size: 5vw;
-  margin: 10vw 0; /* Относительные отступы */
+  margin: 20px; /* Относительные отступы */
 }
 .score {
   text-align: center;
@@ -97,8 +97,6 @@ body {
 }
 
 .clicker img {
-  top: 100px;
-  position: absolute;
   width: 50vw; /* Относительный размер */
   height: 50vw; /* Относительный размер */
   cursor: pointer;
