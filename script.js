@@ -14,6 +14,9 @@ const multiClickUpgrade = document.getElementById('multiClickUpgrade');
 const pasiveClickUpgrade = document.getElementById('pasiveClickUpgrade');
 const uslugiClickUpgrade = document.getElementById('uslugiClickUpgrade');
 const investClickUpgrade = document.getElementById('investClickUpgrade');
+const superClickUpgrade = document.getElementById('superClickUpgrade'); // Добавлено
+const energyBlastUpgrade = document.getElementById('energyBlastUpgrade'); // Добавлено
+
 document.body.style.overflow = 'hidden';
 document.body.style.height = '100vh';
 
@@ -30,6 +33,8 @@ if (localStorage.getItem('gameUpgrades')) {
     if (upgrades.uslugiClickPurchased) uslugiClickUpgrade.style.display = 'none';
     if (upgrades.investClickPurchased) investClickUpgrade.style.display = 'none';
     if (upgrades.multiClickPurchased) multiClickUpgrade.style.display = 'none';
+    if (upgrades.superClickPurchased) superClickUpgrade.style.display = 'none'; // Добавлено
+    if (upgrades.energyBlastPurchased) energyBlastUpgrade.style.display = 'none'; // Добавлено
 }
 
 document.addEventListener('touchstart', function(event) {
@@ -176,8 +181,6 @@ function saveUpgrades() {
         multiClickPurchased: multiClickUpgrade.style.display === 'none',
         superClickPurchased: superClickUpgrade.style.display === 'none',
         energyBlastPurchased: energyBlastUpgrade.style.display === 'none',
-
-
     };
     localStorage.setItem('gameUpgrades', JSON.stringify(upgrades));
 }
