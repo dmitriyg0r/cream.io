@@ -116,6 +116,26 @@ multiClickUpgrade.addEventListener('click', () => {
     }
 });
 
+superClickUpgrade.addEventListener('click', () => {
+    if (score >= 1000) {
+        score -= 1000;
+        clickMultiplier += 5;
+        scoreElement.textContent = score;
+        superClickUpgrade.style.display = 'none'; // Скрыть улучшение после покупки
+        saveUpgrades();
+    }
+});
+
+energyBlastUpgrade.addEventListener('click', () => {
+    if (score >= 3000) {
+        score -= 3000;
+        clickMultiplier += 10;
+        scoreElement.textContent = score;
+        energyBlastUpgrade.style.display = 'none'; // Скрыть улучшение после покупки
+        saveUpgrades();
+    }
+});
+
 pasiveClickUpgrade.addEventListener('click', () => {
     if (score >= 100) {
         score -= 100;
