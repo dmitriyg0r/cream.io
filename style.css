@@ -72,17 +72,19 @@ body {
 @media (prefers-reduced-motion) {
   body { animation: none; }
 }
+
 .pasive {
   text-align: center;
-  font-size: 5vw;
-  margin: 20px; /* Относительные отступы */
+  font-size: clamp(16px, 5vw, 32px);
+  margin: 5vw;
 }
+
 .score {
   text-align: center;
-  font-size: 12vw; /* размера шрифта */
-  margin: 13vw 0; /* Относительные отступы */
+  font-size: clamp(24px, 12vw, 64px);
+  margin: 13vw 0;
   position: absolute;
-  top: 40px; /* позиционирование */
+  top: 40px;
   width: 100%;
   -webkit-text-stroke: 1px black;
   color: white;
@@ -97,8 +99,8 @@ body {
 }
 
 .clicker img {
-  width: 50vw; /* Относительный размер */
-  height: 50vw; /* Относительный размер */
+  width: clamp(100px, 50vw, 300px);
+  height: clamp(100px, 50vw, 300px);
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   -webkit-tap-highlight-color: transparent;
@@ -111,7 +113,7 @@ body {
 
 .floating-score {
   position: absolute;
-  font-size: 10vw; /* Относительный размер шрифта */
+  font-size: clamp(16px, 10vw, 48px);
   color: #ffffff;
   pointer-events: none;
   animation: floatUp 1.5s ease-in-out forwards;
@@ -130,14 +132,14 @@ body {
 
 .menu-container {
   position: fixed;
-  bottom: 2vw; /* Относительное позиционирование */
-  left: 1vw; /* Относительное позиционирование */
-  right: 1vw; /* Относительное позиционирование */
+  bottom: 2vw;
+  left: 1vw;
+  right: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2vw; /* Относительные отступы */
+  padding: 2vw;
 }
 
 .menu-item {
@@ -149,13 +151,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2vw; /* Относительные отступы */
+  padding: 2vw;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   color: #ffffff;
-  border-radius: 2vw; /* Относительный радиус скругления */
+  border-radius: 2vw;
   position: relative;
-  margin: 0 1vw; /* Относительные отступы */
+  margin: 0 1vw;
   background: linear-gradient(135deg, rgba(0, 17, 255, 0.7), rgba(0, 17, 255, 0.9));
 }
 
@@ -167,7 +169,7 @@ body {
 .menu-item:not(:last-child)::after {
   content: ' ';
   position: absolute;
-  right: -1vw; /* Относительное позиционирование */
+  right: -1vw;
   top: 50%;
   transform: translateY(-50%);
   height: 50%;
@@ -176,7 +178,7 @@ body {
 }
 
 .menu-item i {
-  margin-bottom: 0.5vw; /* Относительные отступы */
+  margin-bottom: 0.5vw;
   transition: transform 0.3s;
 }
 
@@ -200,12 +202,12 @@ body {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
   margin: 10% auto;
-  padding: 2vw; /* Относительные отступы */
+  padding: 2vw;
   border: 1px solid #888;
   width: 80%;
   text-align: center;
   color: #fff;
-  border-radius: 1.5vw; /* Относительный радиус скругления */
+  border-radius: 1.5vw;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
@@ -214,17 +216,17 @@ body {
 }
 
 .modal-content img {
-  width: 10vw; /* Относительный размер */
-  height: 10vw; /* Относительный размер */
-  margin-bottom: 1vw; /* Относительные отступы */
+  width: clamp(20px, 10vw, 60px);
+  height: clamp(20px, 10vw, 60px);
+  margin-bottom: 1vw;
 }
 
 .close {
   color: #aaa;
   position: absolute;
-  right: 1vw; /* Относительное позиционирование */
-  top: 1vw; /* Относительное позиционирование */
-  font-size: 8vw; /* Относительный размер шрифта */
+  right: 1vw;
+  top: 1vw;
+  font-size: clamp(16px, 8vw, 48px);
   font-weight: bold;
 }
 
@@ -243,7 +245,7 @@ body {
 }
 
 .upgrades-list li {
-  padding: 1vw; /* Относительные отступы */
+  padding: 1vw;
   border-bottom: 1px solid #888;
   transition: background-color 0.3s;
 }
@@ -265,17 +267,17 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 5vw; /* Относительные отступы */
+    padding: 5vw;
   }
 
   .menu-item {
     flex: 1;
-    margin: 0 0.5vw; /* Относительные отступы */
-    padding: 1.5vw; /* Относительные отступы */
-    font-size: 3.5vw; /* Относительный размер шрифта */
+    margin: 0 0.5vw;
+    padding: 1.5vw;
+    font-size: clamp(12px, 3.5vw, 24px);
     text-align: center;
     color: #fff;
-    border-radius: 1vw; /* Относительный радиус скругления */
+    border-radius: 1vw;
     background: linear-gradient(135deg, rgba(0, 17, 255, 0.7), rgba(0, 17, 255, 0.9));
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   }
@@ -288,7 +290,7 @@ body {
   .menu-item:not(:last-child)::after {
     content: '';
     align-items: center;
-    right: -0.5vw; /* Относительное позиционирование */
+    right: -0.5vw;
     top: 50%;
     transform: translateY(-50%);
     height: 50%;
@@ -297,8 +299,8 @@ body {
   }
 
   .menu-item i {
-    font-size: 5vw; /* Относительный размер шрифта */
-    margin-bottom: 0.5vw; /* Относительные отступы */
+    font-size: clamp(12px, 5vw, 24px);
+    margin-bottom: 0.5vw;
   }
 
   .menu-item:hover i {
@@ -308,17 +310,17 @@ body {
   .modal-content {
     margin: 20% auto;
     width: 90%;
-    padding: 1.5vw; /* Относительные отступы */
+    padding: 1.5vw;
   }
 
   .modal-content img {
-    width: 8vw; /* Относительный размер */
-    height: 8vw; /* Относительный размер */
+    width: clamp(16px, 8vw, 48px);
+    height: clamp(16px, 8vw, 48px);
   }
 
   .score {
-    font-size: 15vw; /* Относительный размер шрифта */
-    top: 5vw; /* Относительное позиционирование */
+    font-size: clamp(20px, 15vw, 64px);
+    top: 5vw;
   }
 
   .clicker {
@@ -327,8 +329,8 @@ body {
   }
 
   .clicker img {
-    width: 80vw; /* Относительный размер */
-    height: 80vw; /* Относительный размер */
+    width: clamp(80px, 80vw, 400px);
+    height: clamp(80px, 80vw, 400px);
   }
 
   body {
