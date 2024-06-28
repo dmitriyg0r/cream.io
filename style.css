@@ -76,7 +76,7 @@ body {
 .score {
   text-align: center;
   font-size: 12vw; /* размера шрифта */
-  margin: 2vw 0; /* Относительные отступы */
+  margin: 13vw 0; /* Относительные отступы */
   position: absolute;
   top: 40px; /* позиционирование */
   width: 100%;
@@ -127,13 +127,13 @@ body {
 .menu-container {
   position: fixed;
   bottom: 2vw; /* Относительное позиционирование */
-  left: 2vw; /* Относительное позиционирование */
-  right: 2vw; /* Относительное позиционирование */
+  left: 1vw; /* Относительное позиционирование */
+  right: 1vw; /* Относительное позиционирование */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1vw; /* Относительные отступы */
+  padding: 2vw; /* Относительные отступы */
 }
 
 .menu-item {
@@ -148,7 +148,7 @@ body {
   padding: 2vw; /* Относительные отступы */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  color: #fff;
+  color: #ffffff;
   border-radius: 2vw; /* Относительный радиус скругления */
   position: relative;
   margin: 0 1vw; /* Относительные отступы */
@@ -161,7 +161,7 @@ body {
 }
 
 .menu-item:not(:last-child)::after {
-  content: '';
+  content: ' ';
   position: absolute;
   right: -1vw; /* Относительное позиционирование */
   top: 50%;
@@ -219,7 +219,7 @@ body {
   position: absolute;
   right: 1vw; /* Относительное позиционирование */
   top: 1vw; /* Относительное позиционирование */
-  font-size: 2.8vw; /* Относительный размер шрифта */
+  font-size: 8vw; /* Относительный размер шрифта */
   font-weight: bold;
 }
 
