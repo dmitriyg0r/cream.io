@@ -124,6 +124,24 @@ body {
   }
 }
 
+.energy-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vw;
+  font-size: 1.2em;
+  color: #000; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 1vw; 
+  border-radius: 1vw;
+  position: Left; 
+  z-index: 10;
+}
+
+.energy-icon {
+  margin-right: 5vw;
+}
+
 .menu-container {
   position: fixed;
   bottom: 2vw;

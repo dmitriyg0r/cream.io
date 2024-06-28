@@ -19,6 +19,11 @@
         <div class="clicker">
             <img src="img.png" alt="Нажми меня!" id="clickImage">
         </div>
+        <!-- Энергия над кнопками меню -->
+        <div class="energy-bar">
+            <span class="energy-icon">⚡</span>
+            <span id="energy">100</span>
+        </div>
         <!-- Нижнее Меню -->
         <nav class="menu-container">
             <button class="menu-item" id="refButton" aria-label="Рефералы">
@@ -48,14 +53,15 @@
     <div id="upgradesModal" class="modal" role="dialog" aria-labelledby="upgradesModalLabel" aria-hidden="true">
         <div class="modal-content">
             <span class="close" aria-label="Закрыть">&times;</span>
-            <ul class="upgrades-list">
-                <li id="multiClickUpgrade">Мульти клик - 300 💸</li>
-                <li id="superClickUpgrade">Суперщелчок - 1000 💸</li>
-                <li id="energyBlastUpgrade">Энергетический удар - 3000 💸</li>
+            <ul class="upgrades-list" role="list">
+                <p id="upgradesModalLabel">💪сила клика💪</p>
+                <li id="multiClickUpgrade" role="listitem">Мульти клик - 300 💸</li>
+                <li id="superClickUpgrade" role="listitem">Суперщелчок - 1000 💸</li>
+                <li id="energyBlastUpgrade" role="listitem">Энергетический удар - 3000 💸</li>
                 <p>📈клик в час📈</p>
-                <li id="pasiveClickUpgrade">Пасивный доход - 100 💸/ч</li>
-                <li id="uslugiClickUpgrade">Услуги кликальщика - 300 💸/ч</li>
-                <li id="investClickUpgrade">Инвестиции в будущее - 1000 💸/ч</li>
+                <li id="pasiveClickUpgrade" role="listitem">Пасивный доход - 100 💸/ч</li>
+                <li id="uslugiClickUpgrade" role="listitem">Услуги кликальщика - 300 💸/ч</li>
+                <li id="investClickUpgrade" role="listitem">Инвестиции в будущее - 1000 💸/ч</li>
             </ul>
         </div>
     </div>
@@ -72,4 +78,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
