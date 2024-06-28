@@ -194,10 +194,10 @@ body {
 
 .modal-content {
   cursor: pointer;
-  background-color: #0d00ff;
+  background-color: #1E90FF;
   margin: 10% auto;
   padding: 2vw;
-  border: 1px solid #444;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   width: 80%;
   max-width: 600px;
   text-align: center;

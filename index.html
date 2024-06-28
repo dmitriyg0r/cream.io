@@ -5,65 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>creamclick</title>
-
-
+    <title>CreamClick</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="score">
-        💸 <span id="score">0</span> 💸
-    </div>
-    <div class="clicker">
-        <img src="img.png" alt="Нажми меня!" id="clickImage">
-    </div>
-    <!-- Нижнее Меню -->
-    <div class="menu-container">
-        <div class="menu-item" id="refButton" tabindex="0">
-            <i class="fas fa-user"></i>
-            <span>Рефералы</span>
+    <header>
+        <div class="score">
+            💸 <span id="score">0</span> 💸
         </div>
-        <div class="menu-item" id="upgradesButton" tabindex="0">
-            <i class="fas fa-cog"></i>
-            <span>Улучшения</span>
+    </header>
+    <main>
+        <div class="clicker">
+            <img src="img.png" alt="Нажми меня!" id="clickImage">
         </div>
-        <div class="menu-item" id="dropButton" tabindex="0">
-            <i class="fas fa-box"></i>
-            <span>Дроп</span>
-        </div>
-    </div>
+        <!-- Нижнее Меню -->
+        <nav class="menu-container">
+            <button class="menu-item" id="refButton" aria-label="Рефералы">
+                <i class="fas fa-user"></i>
+                <span>Рефералы</span>
+            </button>
+            <button class="menu-item" id="upgradesButton" aria-label="Улучшения">
+                <i class="fas fa-cog"></i>
+                <span>Улучшения</span>
+            </button>
+            <button class="menu-item" id="dropButton" aria-label="Дроп">
+                <i class="fas fa-box"></i>
+                <span>Дроп</span>
+            </button>
+        </nav>
+    </main>
     
     <!-- Модальное окно для Рефералов -->
-    <div id="refModal" class="modal">
+    <div id="refModal" class="modal" role="dialog" aria-labelledby="refModalLabel" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Скоро</p>
+            <span class="close" aria-label="Закрыть">&times;</span>
+            <p id="refModalLabel">Скоро</p>
         </div>
     </div>
 
     <!-- Модальное окно для улучшений -->
-    <div id="upgradesModal" class="modal">
+    <div id="upgradesModal" class="modal" role="dialog" aria-labelledby="upgradesModalLabel" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" aria-label="Закрыть">&times;</span>
             <ul class="upgrades-list">
-                <li id="multiClickUpgrade" >Мульти клик - 300 💸</li>
-                <li id= "superClickUpgrade">Суперщелчок - 1000 💸</li>
+                <li id="multiClickUpgrade">Мульти клик - 300 💸</li>
+                <li id="superClickUpgrade">Суперщелчок - 1000 💸</li>
                 <li id="energyBlastUpgrade">Энергетический удар - 3000 💸</li>
-                <p> ----клик в час----- </p>
-                <li id="pasiveClickUpgrade" >пасивный доход - 100 💸/ч</li>
-                <li id="uslugiClickUpgrade" >услуги кликальщика - 300 💸/ч</li>
-                <li id="investClickUpgrade" >инвестиции в будущее - 1000 💸/ч</li>
+                <p>📈клик в час📈</p>
+                <li id="pasiveClickUpgrade">Пасивный доход - 100 💸/ч</li>
+                <li id="uslugiClickUpgrade">Услуги кликальщика - 300 💸/ч</li>
+                <li id="investClickUpgrade">Инвестиции в будущее - 1000 💸/ч</li>
             </ul>
         </div>
     </div>
 
     <!-- Модальное окно для дропа -->
-    <div id="dropModal" class="modal">
+    <div id="dropModal" class="modal" role="dialog" aria-labelledby="dropModalLabel" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" aria-label="Закрыть">&times;</span>
             <img src="img.png" alt="Изображение">
-            <p>Скоро</p>
+            <p id="dropModalLabel">Скоро</p>
         </div>
     </div>
 
