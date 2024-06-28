@@ -14,6 +14,8 @@ const multiClickUpgrade = document.getElementById('multiClickUpgrade');
 const pasiveClickUpgrade = document.getElementById('pasiveClickUpgrade');
 const uslugiClickUpgrade = document.getElementById('uslugiClickUpgrade');
 const investClickUpgrade = document.getElementById('investClickUpgrade');
+document.body.style.overflow = 'hidden';
+document.body.style.height = '100vh';
 
 // Проверяем, есть ли сохраненный счет в localStorage
 if (localStorage.getItem('gameScore')) {
