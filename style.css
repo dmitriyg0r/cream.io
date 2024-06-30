@@ -93,8 +93,8 @@ body {
 }
 
 .clicker img {
-  width: clamp(80vw);
-  height: clamp(80vw);
+  width:  50vw;
+  height: 50Avw;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   -webkit-tap-highlight-color: transparent;
